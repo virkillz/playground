@@ -1,0 +1,73 @@
+<h1>Show Land</h1>
+
+<ul>
+
+  <li>
+    <strong>Block:</strong>
+    <%= @land.block %>
+  </li>
+
+  <li>
+    <strong>Index:</strong>
+    <%= @land.index %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @land.type %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <%= @land.image %>
+  </li>
+
+  <li>
+    <strong>Pos x:</strong>
+    <%= @land.pos_x %>
+  </li>
+
+  <li>
+    <strong>Pos y:</strong>
+    <%= @land.pos_y %>
+  </li>
+
+  <li>
+    <strong>Eth address:</strong>
+    <%= @land.eth_address %>
+  </li>
+
+  <li>
+    <strong>Map address:</strong>
+    <%= @land.map_address %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @land.description %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @land.name %>
+  </li>
+
+  <li>
+    <strong>Sell price:</strong>
+    <%= @land.sell_price %>
+  </li>
+
+  <li>
+    <strong>Rent price:</strong>
+    <%= @land.rent_price %>
+  </li>
+
+  <li>
+    <strong>Roi:</strong>
+    <%= @land.roi %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.land_path(@conn, :edit, @land) %></span> |
+<span><%= link "Back", to: Routes.land_path(@conn, :index) %></span>

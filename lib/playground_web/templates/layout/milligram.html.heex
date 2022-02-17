@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= csrf_meta_tag() %>
+    
+    <%= live_title_tag assigns[:page_title] || "Idle Warrior", suffix: " · Phoenix Framework" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>    
+    
+
+  </head>
+  <body class="bg-green-100 font-serif">
+    <header class="container mx-auto">
+      <section class="container">
+        <nav class="p-4">
+          <%= render "_user_menu.html", assigns %>
+        </nav>
+      </section>
+    </header>
+    <div class="container mx-auto">
+      <%= @inner_content %>
+    </div>
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      feather.replace()
+    </script>
+
+    <script>
+      $(document).ready( function () {
+      $('#myTable').DataTable();
+      } );
+    </script>     
+  </body>
+</html>

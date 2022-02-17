@@ -1,0 +1,38 @@
+<h1>Listing Lands</h1>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Block</th>
+      <th>Index</th>
+      <th>Type</th>
+      <th>Pos x</th>
+      <th>Pos y</th>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for land <- @lands do %>
+    <tr>
+      <td><%= land.id %></td>
+      <td><%= land.block %></td>
+      <td><%= land.index %></td>
+      <td><%= land.type %></td>
+      <td><%= land.pos_x %></td>
+      <td><%= land.pos_y %></td>
+      <td><%= land.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.land_path(@conn, :show, land) %></span>
+        <span><%= link "Edit", to: Routes.land_path(@conn, :edit, land) %></span>
+        <span><%= link "Delete", to: Routes.land_path(@conn, :delete, land), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Land", to: Routes.land_path(@conn, :new) %></span>

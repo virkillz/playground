@@ -1,0 +1,33 @@
+<h1>Show Map</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @map.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @map.description %>
+  </li>
+
+  <li>
+    <strong>Is visible:</strong>
+    <%= @map.is_visible %>
+  </li>
+
+  <li>
+    <strong>Size:</strong>
+    <%= @map.size %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <%= @map.image %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.map_path(@conn, :edit, @map) %></span> |
+<span><%= link "Back", to: Routes.map_path(@conn, :index) %></span>
