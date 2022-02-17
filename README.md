@@ -1,5 +1,10 @@
 # Playground
 
+![alt text](priv/static/images/rascals.png)
+
+Current image is attributed to NFT collection from a friend of mine under his permission. https://opensea.io/Grimusogu
+
+
 
 ## Story
 
@@ -48,13 +53,6 @@ After a while you are eligible to buy a house from the kingdom. Alternatively yo
 
 ### Evicted!
 If you miss your rent, you will got evicted. All your rascals will be strayed unless they already pledge to you. 
-
-
-
-
-
-
-
 
 
 
